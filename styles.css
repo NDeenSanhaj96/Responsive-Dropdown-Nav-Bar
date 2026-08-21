@@ -1,41 +1,174 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 html {
-    font-size: 62.5%;
-    font-weight: 400;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-size: 62.5%;
+  font-weight: 400;
+  font-family:
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    Oxygen,
+    Ubuntu,
+    Cantarell,
+    "Open Sans",
+    "Helvetica Neue",
+    sans-serif;
 }
 
 :root {
-    /* Typography */
-    --font-size-xsmall: 1.2rem; /* 12px */
-    --font-size-small: 1.4rem; /* 14px */
-    --font-size-base: 1.6rem; /* 16px */
-    --font-size-medium: 1.8rem; /* 18px */
-    --font-size-large: 2rem; /* 20px */
-    --font-size-xlarge: 2.4rem; /* 24px */
-    --font-size-2xsmall: 3rem; /* 3px */
-    --font-size-3xsmall: 3.4rem; /* 3.4px */
-    --font-size-4xsmall: 3.6rem; /* 3.6px */
+  /* Typography */
+  --font-size-xsmall: 1.2rem; /* 12px */
+  --font-size-small: 1.4rem; /* 14px */
+  --font-size-base: 1.6rem; /* 16px */
+  --font-size-medium: 1.8rem; /* 18px */
+  --font-size-large: 2rem; /* 20px */
+  --font-size-xlarge: 2.4rem; /* 24px */
+  --font-size-2xsmall: 3rem; /* 3px */
+  --font-size-3xsmall: 3.4rem; /* 3.4px */
+  --font-size-4xsmall: 3.6rem; /* 3.6px */
 
-    --font-weight-light: 300;
-    --font-weight-regular: 400;
-    --font-weight-medium: 500;
-    --font-weight-semibold: 600;
-    --font-weight-bold: 700;
-    --font-weight-black: 800;
+  --font-weight-light: 300;
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+  --font-weight-black: 800;
 
-    /* Spacing System */
-    --space-xsmall: 0.8rem;
-    --space-small: 1.2rem;
-    --space-base: 1.6rem;
-    --space-medium: 2rem;
-    --space-large: 2.4rem;
-    --space-xlarge: 3.2rem;
-    --space-2xlarge: 4rem;
-    --space-3xlarge: 4.8rem;
+  /* Spacing System */
+  --space-xsmall: 0.8rem;
+  --space-small: 1.2rem;
+  --space-base: 1.6rem;
+  --space-medium: 2rem;
+  --space-large: 2.4rem;
+  --space-xlarge: 3.2rem;
+  --space-2xlarge: 4rem;
+  --space-3xlarge: 4.8rem;
+}
+
+body {
+  background-image: url(Images/coffee_img.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  color: #fff;
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+/* Styling The Navbar Container */
+
+.navbar__container {
+  background: transparent;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--space-xlarge);
+  padding: var(--space-base) var(--space-large);
+}
+
+.navbar__logo {
+  width: 25%;
+}
+
+.navbar__menu {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-large);
+}
+
+.navbar__links {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-medium);
+}
+
+.navbar__link a,
+.navbar__cta,
+#services {
+  font-size: var(--font-size-large);
+  font-weight: var(--font-weight-semibold);
+  color: lightgray;
+}
+
+.navbar__link a,
+#services {
+  padding: var(--space-xsmall) var(--space-small);
+  border-radius: 20px;
+  border-top-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+  transition: all 0.3s ease;
+}
+
+.navbar__link a:hover,
+#services:hover {
+  background: hsl(0, 30%, 70%);
+  color: hsl(0, 87%, 12%);
+}
+
+.navbar__cta {
+  background: hsl(0, 30%, 70%);
+  color: hsl(0, 87%, 12%);
+  padding: var(--space-xsmall) var(--space-small);
+  border: 1px solid hsl(0, 40%, 90%);
+  border-radius: 20px;
+  border-top-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+  transition: all 0.3s ease;
+}
+
+.navbar__cta:hover {
+  background: transparent;
+  color: hsl(0, 47%, 89%);
+}
+
+/* Navbar Search */
+
+.navbar__search {
+  border: none;
+  border-radius: 20px;
+  padding: 0.6rem var(--space-xsmall);
+  font-size: var(--font-size-base);
+  color: hsl(0, 95%, 8%);
+}
+
+/* Navbar Toggle Button */
+
+.navbar__toggle {
+  display: none;
+  font-size: var(--font-size-xlarge);
+  font-weight: var(--font-weight-bold);
+  border: none;
+  background: transparent;
+  color: hsl(0, 47%, 89%);
+  padding: var(--space-xsmall);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.navbar__toggle:hover {
+  color: hsl(0, 30%, 70%);
+  transform: translateY(-2px);
+}
+
+/* Navbar Dropdown */
+
+#services {
+  width: 50%;
+  background: transparent;
+  border: none;
 }
