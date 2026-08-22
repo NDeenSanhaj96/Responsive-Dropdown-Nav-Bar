@@ -17,39 +17,37 @@
           <li class="navbar__link"><a href="">About</a></li>
           <li class="navbar__link"><a href="">Contact</a></li>
           <li class="navbar__link"><a href="">Blog</a></li>
-          <li class="navbar__link services">
-            <select name="services" id="services">
-              <option value="">Services</option>
-              <option value="branding"><a href="#branding"></a>Branding</option>
-              <option value="digitalProducts">
-                <a href="#digitalProducts">Digital Products</a>
-              </option>
-              <option value="websites"><a href="#websites">Websites</a></option>
-              <option value="content"><a href="#content">Content</a></option>
-              <option value="development">
-                <a href="#development">Development</a>
-              </option>
-              <option value="sourcecode">
-                <a href="#sourceCode">Digital Apps SourceCode</a>
-              </option>
-            </select>
+          <li class="navbar__link select">
+            <button
+              type="button"
+              class="select__trigger"
+              aria-haspopup="listbox"
+              aria-expanded="false"
+            >
+              <span>Services</span>
+              <span class="arrow">▽</span>
+            </button>
+            <ul class="select__options" role="listbox" tabindex="-1">
+              <li role="option" data-target="#branding"></li>
+              <li role="option" data-target="#digitalApps">Digital Apps</li>
+              <li role="option" data-target="#websites">Websites</li>
+              <li role="option" data-target="#devs">Developments</li>
+              <li role="option" data-target="#srcCode">Source Codes</li>
+            </ul>
           </li>
         </ul>
-        <input type="search" class="navbar__search" placeholder="search here" />
       </nav>
+      <input type="search" class="navbar__search" placeholder="search here" />
       <a href="#" class="navbar__cta">Let's Talk</a>
       <button class="navbar__toggle">✕☰</button>
     </header>
     <main>
-      <h1>Responsive Dropdown Nav Bar</h1>
-      <pre>
-                Fully Responsive across all different devices
-
-                                    By
-
-                            Nasir Kamil Datti
-            </pre
-      >
+      <h1 class="main__heading">Responsive Dropdown Nav Bar</h1>
+      <div class="description">
+        <p>Fully Responsive across different devices</p>
+        <p>By</p>
+        <p>Nasir Kamil Datti</p>
+      </div>
     </main>
     <script src="script.js"></script>
   </body>

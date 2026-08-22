@@ -29,9 +29,9 @@ html {
   --font-size-medium: 1.8rem; /* 18px */
   --font-size-large: 2rem; /* 20px */
   --font-size-xlarge: 2.4rem; /* 24px */
-  --font-size-2xsmall: 3rem; /* 3px */
-  --font-size-3xsmall: 3.4rem; /* 3.4px */
-  --font-size-4xsmall: 3.6rem; /* 3.6px */
+  --font-size-2xlarge: 3rem; /* 3px */
+  --font-size-3xlarge: 3.4rem; /* 3.4px */
+  --font-size-4xlarge: 3.6rem; /* 3.6px */
 
   --font-weight-light: 300;
   --font-weight-regular: 400;
@@ -58,6 +58,7 @@ body {
   background-repeat: no-repeat;
   background-attachment: fixed;
   color: #fff;
+  height: 100vh;
 }
 
 a {
@@ -71,12 +72,13 @@ li {
 /* Styling The Navbar Container */
 
 .navbar__container {
+  width: 100%;
   background: transparent;
   display: flex;
   justify-content: space-between;
   align-items: center;
   gap: var(--space-xlarge);
-  padding: var(--space-base) var(--space-large);
+  padding: var(--space-xlarge) var(--space-3xlarge);
 }
 
 .navbar__logo {
@@ -88,6 +90,7 @@ li {
   align-items: center;
   justify-content: space-between;
   gap: var(--space-large);
+  position: relative;
 }
 
 .navbar__links {
@@ -99,14 +102,14 @@ li {
 
 .navbar__link a,
 .navbar__cta,
-#services {
+.select__trigger {
   font-size: var(--font-size-large);
   font-weight: var(--font-weight-semibold);
   color: lightgray;
 }
 
 .navbar__link a,
-#services {
+.select__trigger {
   padding: var(--space-xsmall) var(--space-small);
   border-radius: 20px;
   border-top-right-radius: 5px;
@@ -115,7 +118,7 @@ li {
 }
 
 .navbar__link a:hover,
-#services:hover {
+.select__trigger:hover {
   background: hsl(0, 30%, 70%);
   color: hsl(0, 87%, 12%);
 }
@@ -128,6 +131,7 @@ li {
   border-radius: 20px;
   border-top-right-radius: 5px;
   border-bottom-left-radius: 5px;
+  text-wrap: nowrap;
   transition: all 0.3s ease;
 }
 
@@ -167,8 +171,78 @@ li {
 
 /* Navbar Dropdown */
 
-#services {
-  width: 50%;
+.select__trigger {
+  width: 100%;
   background: transparent;
   border: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-xsmall); 
+  cursor: pointer;
+}
+
+.select__trigger .arrow {
+  font-size: var(--font-size-xsmall);
+}
+
+.select__options {
+  width: 50%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: var(--space-xsmall);
+  font-size: var(--font-size-medium);
+  font-weight: var(--font-weight-medium);
+  background: hsl(0, 30%, 70%);
+  color: hsl(0, 87%, 12%);
+  padding: var(--space-medium) var(--space-small);
+  border-radius: 30px;
+  border-top-left-radius: 0;
+  position: absolute;
+  top: 110%;
+  right: 0;
+  transform: translateX(70%);
+}
+
+.select__options li {
+  display: inline-block;
+  width: 100%;
+  height: auto;
+  padding: var(--space-xsmall);
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.select__options li:hover {
+  background: brown;
+  color: hsl(0, 30%, 70%);
+}
+
+
+/* The Body */
+
+main {
+  margin: 100px auto;
+  text-align: center;
+}
+
+main .main__heading {
+  font-size: var(--font-size-4xlarge);
+  font-weight: var(--font-weight-bold);
+  color: brown;
+}
+
+.description {
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-medium);
+  color: hsla(0, 63%, 61%, 0.836);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-base);
 }
