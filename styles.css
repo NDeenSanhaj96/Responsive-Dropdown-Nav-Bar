@@ -57,7 +57,7 @@ body {
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: fixed;
-  color: #fff;
+  color: lightblue;
   height: 100vh;
 }
 
@@ -236,16 +236,15 @@ main {
 main .main__heading {
   font-size: var(--font-size-4xlarge);
   font-weight: var(--font-weight-bold);
-  color: brown;
 }
 
 .description {
   font-size: var(--font-size-base);
   font-weight: var(--font-weight-medium);
-  color: hsla(0, 63%, 61%, 0.836);
+  color: lightskyblue;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  gap: var(--space-base);
 }
+
