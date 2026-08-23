@@ -102,14 +102,14 @@ li {
 
 .navbar__link a,
 .navbar__cta,
-.select__trigger {
+.navbar__dropdown--toggle {
   font-size: var(--font-size-large);
   font-weight: var(--font-weight-semibold);
   color: lightgray;
 }
 
 .navbar__link a,
-.select__trigger {
+.navbar__dropdown--toggle {
   padding: var(--space-xsmall) var(--space-small);
   border-radius: 20px;
   border-top-right-radius: 5px;
@@ -118,10 +118,70 @@ li {
 }
 
 .navbar__link a:hover,
-.select__trigger:hover {
+.navbar__dropdown--toggle:hover {
   background: hsl(0, 30%, 70%);
   color: hsl(0, 87%, 12%);
 }
+
+/* Navbar Dropdown */
+
+.navbar__dropdown {
+  /* width: 100%; */
+  background: transparent;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  position: relative;
+}
+
+.navbar__dropdown--toggle .arrow {
+  font-size: var(--font-size-xsmall);
+}
+
+.navbar__dropdown--menu {
+  display: none;
+}
+
+.navbar__dropdown--menu.open {
+  position: absolute;
+  top: 110%;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  width: 30rem;
+  max-height: 150px;
+  overflow-y: auto;
+  background: hsl(0, 30%, 70%);
+  border-radius: 12px;
+  padding: var(--space-small);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.25);
+}
+
+.navbar__dropdown--menu a {
+  color: hsl(0, 87%, 12%);
+  padding: var(--space-xsmall);
+  transition: all 0.3s ease;
+}
+
+.navbar__dropdown--menu a:hover {
+  background: hsl(0, 87%, 12%);
+  color: lightgray;
+}
+
+/* Navbar Search */
+
+.navbar__search {
+  border: none;
+  border-radius: 20px;
+  padding: 0.6rem var(--space-xsmall);
+  font-size: var(--font-size-base);
+  color: hsl(0, 95%, 8%);
+}
+
+/* Navbar Call To Action CTA */
 
 .navbar__cta {
   background: hsl(0, 30%, 70%);
@@ -140,88 +200,31 @@ li {
   color: hsl(0, 47%, 89%);
 }
 
-/* Navbar Search */
+/* Navbar Toggle Buttons */
 
-.navbar__search {
+.navbar__dropdown--toggle {
   border: none;
-  border-radius: 20px;
-  padding: 0.6rem var(--space-xsmall);
-  font-size: var(--font-size-base);
-  color: hsl(0, 95%, 8%);
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.3s ease;
 }
 
-/* Navbar Toggle Button */
-
-.navbar__toggle {
+.navbar__hamburger--btn {
   display: none;
   font-size: var(--font-size-xlarge);
   font-weight: var(--font-weight-bold);
-  border: none;
+  color: hsl(0, 40%, 90%);
   background: transparent;
-  color: hsl(0, 47%, 89%);
+  border: none;
   padding: var(--space-xsmall);
-  cursor: pointer;
   transition: all 0.3s ease;
-}
+  cursor: pointer;
+} 
 
-.navbar__toggle:hover {
+.navbar__hamburger--btn:hover {
   color: hsl(0, 30%, 70%);
   transform: translateY(-2px);
 }
-
-/* Navbar Dropdown */
-
-.select__trigger {
-  width: 100%;
-  background: transparent;
-  border: none;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: var(--space-xsmall); 
-  cursor: pointer;
-}
-
-.select__trigger .arrow {
-  font-size: var(--font-size-xsmall);
-}
-
-.select__options {
-  width: 50%;
-  height: auto;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: space-between;
-  gap: var(--space-xsmall);
-  font-size: var(--font-size-medium);
-  font-weight: var(--font-weight-medium);
-  background: hsl(0, 30%, 70%);
-  color: hsl(0, 87%, 12%);
-  padding: var(--space-medium) var(--space-small);
-  border-radius: 30px;
-  border-top-left-radius: 0;
-  position: absolute;
-  top: 110%;
-  right: 0;
-  transform: translateX(70%);
-}
-
-.select__options li {
-  display: inline-block;
-  width: 100%;
-  height: auto;
-  padding: var(--space-xsmall);
-  border-radius: 8px;
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-
-.select__options li:hover {
-  background: brown;
-  color: hsl(0, 30%, 70%);
-}
-
 
 /* The Body */
 

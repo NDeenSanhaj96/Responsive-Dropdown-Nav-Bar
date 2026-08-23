@@ -17,29 +17,30 @@
           <li class="navbar__link"><a href="">About</a></li>
           <li class="navbar__link"><a href="">Contact</a></li>
           <li class="navbar__link"><a href="">Blog</a></li>
-          <li class="navbar__link select">
+          <li class="navbar__link navbar__dropdown">
             <button
               type="button"
-              class="select__trigger"
+              class="navbar__dropdown--toggle"
               aria-haspopup="listbox"
               aria-expanded="false"
             >
               <span>Services</span>
               <span class="arrow">▽</span>
             </button>
-            <ul class="select__options" role="listbox" tabindex="-1">
-              <li role="option" data-target="#branding"></li>
-              <li role="option" data-target="#digitalApps">Digital Apps</li>
-              <li role="option" data-target="#websites">Websites</li>
-              <li role="option" data-target="#devs">Developments</li>
-              <li role="option" data-target="#srcCode">Source Codes</li>
-            </ul>
+            <div class="navbar__dropdown--menu" role="listbox" tabindex="-1">
+              <a href="#branding">Branding</a>
+              <a href="#digitalApps">Digital Apps</a>
+              <a href="#websites">Web Design</a>
+              <a href="#devs">Web Development</a>
+              <a href="#ui">UI/UX Design</a>
+              <a href="#srcCode">Source Codes</a>
+            </div>
           </li>
         </ul>
       </nav>
       <input type="search" class="navbar__search" placeholder="search here" />
       <a href="#" class="navbar__cta">Let's Talk</a>
-      <button class="navbar__toggle">✕☰</button>
+      <button class="navbar__hamburger--btn">✕☰</button>
     </header>
     <main>
       <h1 class="main__heading">Responsive Dropdown Nav Bar</h1>
