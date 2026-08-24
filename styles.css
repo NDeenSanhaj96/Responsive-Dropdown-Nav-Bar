@@ -293,7 +293,15 @@ li {
   }
 
   .navbar__cta {
+    background: hsl(0, 87%, 12%);
+    color: hsl(0, 47%, 89%);
     order: 3;
+    transition: all 0.3s ease;
+  }
+
+  .navbar__cta:hover {
+    background: hsl(0, 40%, 90%);
+    color: hsl(0, 95%, 8%);
   }
 
   .navbar__links a,
