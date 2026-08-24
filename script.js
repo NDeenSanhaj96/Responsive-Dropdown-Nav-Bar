@@ -4,6 +4,7 @@ const dropdownLink = document.querySelectorAll(".navbar__dropdown--menu a");
 const overlay = document.querySelector(".navbar__overlay");
 const navbarHamburgerBtn = document.querySelector(".navbar__hamburger--btn");
 const navbarMenu = document.querySelector(".navbar__menu");
+const navbarCtaBtn = document.querySelector(".navbar__cta");
 
 dropdownToggle.addEventListener("click", () => {
   dropdownMenu.classList.toggle("open");
@@ -30,6 +31,7 @@ navbarHamburgerBtn.addEventListener("click", () => {
     navbarHamburgerBtn.textContent = "✕";
     navbarHamburgerBtn.style.color = "hsl(0, 95%, 8%)";
     overlay.classList.add("open");
+    navbarCtaBtn.addEventListener('click', closeNavbarMenu);
   } else {
     navbarHamburgerBtn.textContent = "☰";
     navbarHamburgerBtn.style.color = "hsl(0, 40%, 90%)";
