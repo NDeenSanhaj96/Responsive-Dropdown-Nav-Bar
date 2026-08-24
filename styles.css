@@ -248,8 +248,11 @@ li {
     display: none;
   }
 
-  .navbar__search {
-    display: none;
+  .navbar__menu.open {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
   }
 
   .navbar__cta {
@@ -258,6 +261,11 @@ li {
 
   .navbar__hamburger--btn {
     display: block;
+  }
+
+  .navbar__search {
+    font-size: var(--font-size-base);
+    padding: var(--space-xsmall);
   }
 }
 
