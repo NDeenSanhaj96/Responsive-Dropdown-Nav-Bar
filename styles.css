@@ -270,6 +270,8 @@ li {
   }
 
   .navbar__search {
+    width: 50%;
+    margin-top: 1.4rem;
     order: 1;
   }
 
@@ -281,6 +283,10 @@ li {
     gap: var(--space-xlarge);
     margin-top: -3.4rem;
     order: 2;
+  }
+
+  .navbar__overlay {
+    z-index: 10;
   }
 
   .navbar__cta {
