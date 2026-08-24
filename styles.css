@@ -241,6 +241,26 @@ li {
   z-index: 10;
 }
 
+/* Navbar media Queries */
+
+@media (max-width: 768px) {
+  .navbar__menu {
+    display: none;
+  }
+
+  .navbar__search {
+    display: none;
+  }
+
+  .navbar__cta {
+    display: none;
+  }
+
+  .navbar__hamburger--btn {
+    display: block;
+  }
+}
+
 /* The Body */
 
 main {
