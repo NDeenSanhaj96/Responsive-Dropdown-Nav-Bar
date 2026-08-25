@@ -8,6 +8,7 @@ const navbarCtaBtn = document.querySelector(".navbar__cta");
 
 dropdownToggle.addEventListener("click", () => {
   dropdownMenu.classList.toggle("open");
+  overlay.classList.toggle("open");
 });
 
 function closeNavbarMenu() {
@@ -31,7 +32,7 @@ navbarHamburgerBtn.addEventListener("click", () => {
     navbarHamburgerBtn.textContent = "✕";
     navbarHamburgerBtn.style.color = "hsl(0, 95%, 8%)";
     overlay.classList.add("open");
-    navbarCtaBtn.addEventListener('click', closeNavbarMenu);
+    navbarCtaBtn.addEventListener("click", closeNavbarMenu);
   } else {
     navbarHamburgerBtn.textContent = "☰";
     navbarHamburgerBtn.style.color = "hsl(0, 40%, 90%)";
