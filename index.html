@@ -7,44 +7,52 @@
     <title>Dropdown Nav Bar</title>
   </head>
   <body>
-    <header class="navbar__container">
-      <a href="#work"
-        ><img class="navbar__logo" src="Images/logo.png" alt="Logo image"
-      /></a>
-      <nav class="navbar__menu">
-        <ul class="navbar__links">
-          <li class="navbar__link"><a href="#home">Home</a></li>
-          <li class="navbar__link"><a href="#about">About</a></li>
-          <li class="navbar__link"><a href="#contact">Contact</a></li>
-          <li class="navbar__link"><a href="#blog">Blog</a></li>
-          <li class="navbar__link navbar__dropdown">
-            <button
-              type="button"
-              class="navbar__dropdown--toggle"
-              aria-haspopup="listbox"
-              aria-expanded="false"
-            >
-              <span>Services</span>
-              <span class="arrow">▽</span>
-            </button>
-            <div class="navbar__dropdown--menu" role="listbox" tabindex="-1">
-              <a href="#branding">Branding</a>
-              <a href="#digitalApps">Digital Apps</a>
-              <a href="#websites">Web Design</a>
-              <a href="#devs">Web Development</a>
-              <a href="#ui">UI/UX Design</a>
-              <a href="#srcCode">Source Codes</a>
-            </div>
-          </li>
-        </ul>
-        <input type="search" class="navbar__search" placeholder="search here" />
-        <a href="#contact" class="navbar__cta">Let's Talk</a>
-      </nav>
-      <button class="navbar__hamburger--btn">☰</button>
-      <div class="navbar__overlay"></div>
-    </header>
     <main>
       <section id="home">
+        <header class="navbar__container">
+          <a href="#home"
+            ><img class="navbar__logo" src="Images/logo.png" alt="Logo image"
+          /></a>
+          <nav class="navbar__menu">
+            <ul class="navbar__links">
+              <li class="navbar__link"><a href="#home">Home</a></li>
+              <li class="navbar__link"><a href="#about">About</a></li>
+              <li class="navbar__link"><a href="#contact">Contact</a></li>
+              <li class="navbar__link"><a href="#blog">Blog</a></li>
+              <li class="navbar__link navbar__dropdown">
+                <button
+                  type="button"
+                  class="navbar__dropdown--toggle"
+                  aria-haspopup="listbox"
+                  aria-expanded="false"
+                >
+                  <span>Services</span>
+                  <span class="arrow">▽</span>
+                </button>
+                <div
+                  class="navbar__dropdown--menu"
+                  role="listbox"
+                  tabindex="-1"
+                >
+                  <a href="#branding">Branding</a>
+                  <a href="#digitalApps">Digital Apps</a>
+                  <a href="#websites">Web Design</a>
+                  <a href="#devs">Web Development</a>
+                  <a href="#ui">UI/UX Design</a>
+                  <a href="#srcCode">Source Codes</a>
+                </div>
+              </li>
+            </ul>
+            <input
+              type="search"
+              class="navbar__search"
+              placeholder="search here"
+            />
+            <a href="#contact" class="navbar__cta">Let's Talk</a>
+          </nav>
+          <button class="navbar__hamburger--btn">☰</button>
+          <div class="navbar__overlay"></div>
+        </header>
         <h1 class="main__heading">Responsive Dropdown Nav Bar</h1>
         <div class="description">
           <p>Fully Responsive across different devices</p>
