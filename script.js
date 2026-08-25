@@ -40,3 +40,14 @@ navbarHamburgerBtn.addEventListener("click", () => {
     dropdownMenu.classList.remove("open");
   }
 });
+
+function closeDropdownMenu() {
+  dropdownMenu.classList.remove('open');
+  overlay.classList.remove('open');
+}
+
+document.addEventListener('keydown', (event) => {
+  if (event.key === "Escape") {
+    closeDropdownMenu();
+  }
+});
