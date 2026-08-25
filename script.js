@@ -11,10 +11,19 @@ dropdownToggle.addEventListener("click", () => {
   const isDropdownMenuOpen = dropdownMenu.classList.contains("open");
   if (isDropdownMenuOpen) {
     overlay.classList.toggle("open");
-    dropdownLink[0].focus();
     const links = Array.from(dropdownLink);
-    const currentIndex = links.indexOf(document.activeElement);
-    console.log(currentIndex);
+    dropdownLink[0].focus();
+    document.addEventListener("keydown", (event) => {
+      const currentIndex = links.indexOf(document.activeElement);
+      const nextIndex = currentIndex + 1;
+      const prevIndex = currentIndex - 1;
+      if (event.key === "ArrowDown") {
+        links[nextIndex].focus();
+      }
+      else if (event.key === "ArrowUp") {
+        links[prevIndex].focus();
+      }
+    });
   }
 });
 
