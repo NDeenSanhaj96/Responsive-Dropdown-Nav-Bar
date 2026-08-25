@@ -8,7 +8,14 @@ const navbarCtaBtn = document.querySelector(".navbar__cta");
 
 dropdownToggle.addEventListener("click", () => {
   dropdownMenu.classList.toggle("open");
-  overlay.classList.toggle("open");
+  const isDropdownMenuOpen = dropdownMenu.classList.contains("open");
+  if (isDropdownMenuOpen) {
+    overlay.classList.toggle("open");
+    dropdownLink[0].focus();
+    const links = Array.from(dropdownLink);
+    const currentIndex = links.indexOf(document.activeElement);
+    console.log(currentIndex);
+  }
 });
 
 function closeNavbarMenu() {
@@ -42,11 +49,11 @@ navbarHamburgerBtn.addEventListener("click", () => {
 });
 
 function closeDropdownMenu() {
-  dropdownMenu.classList.remove('open');
-  overlay.classList.remove('open');
+  dropdownMenu.classList.remove("open");
+  overlay.classList.remove("open");
 }
 
-document.addEventListener('keydown', (event) => {
+document.addEventListener("keydown", (event) => {
   if (event.key === "Escape") {
     closeDropdownMenu();
   }
