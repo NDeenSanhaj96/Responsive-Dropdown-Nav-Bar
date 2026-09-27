@@ -243,7 +243,7 @@ li {
 
 /* Navbar media Queries */
 
-@media (max-width: 768px) {
+@media (max-width: 850px) {
   .navbar__container {
     position: relative;
   }
